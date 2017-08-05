@@ -74,6 +74,8 @@
             }
         }).done(function (data) {
             loadResource(uri);
+        }).fail(function (error){
+            alert('Submission failed: ' + JSON.stringify(error));
         });
     }
 </script>

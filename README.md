@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## API
 
 ### Project initialization
 
@@ -75,3 +75,12 @@ You will need to migrate from command line using `artisan migrate`
 ### Check distinct URI
 
 `GET` request on `http://codecacao.dev/api/uri/{uri}` returns URI object if it exists.
+
+## Front-end /w jQuery
+
+### Usage
+
+`GET` request on `http://codecacao.dev/{uri}` returns URI object from the database if exists.
+Existing objects are being updated by submission dynamically, while non existing objects are created upon entering the link
+(provided with the `alert()` message that object was not in the database until now).
+
