@@ -27,7 +27,7 @@ class RatingValidationRequest extends FormRequest
         return [
             'visitor_id' => 'required',
             'uri'        => 'required',
-            'rating'     => 'required|numeric|between:0,10'
+            'rating'     => 'required|int|between:0,10'
         ];
     }
 

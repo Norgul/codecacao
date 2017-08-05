@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\RatingValidationRequest;
-use Illuminate\Http\Request;
+use App\Rating;
 
 class RatingController extends Controller
 {
@@ -15,14 +15,14 @@ class RatingController extends Controller
      */
     public function store(RatingValidationRequest $request)
     {
-
+        Rating::create($request->all());
 
         return response()->json(
             [
                 'status' => 'success',
                 'uri'    => $request->uri,
                 'rating' => $request->rating,
-                'score'  => ''
+                'score'  => Rating::sum('rating') / count(Rating::all())
             ]
         );
     }

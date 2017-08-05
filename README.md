@@ -21,15 +21,15 @@ Program is using SQLite database for storing data locally. In order to initializ
 
 ```
 DB_CONNECTION=sqlite
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_USERNAME=homestead
-DB_PASSWORD=secret
 ```
+
+Leave out all other attributes prefixed with `DB_`.
 
 You will need to migrate from command line using `artisan migrate`
 
 ### Sample request
+
+`POST` request on `http://codecacao.dev/api/rating` route with the following body:
 
 ```
 {
@@ -44,6 +44,9 @@ You will need to migrate from command line using `artisan migrate`
 `uri` -> required, varchar(255)
 
 `rating` -> required, int(0, 10)
+
+
+`Content-Type` header needs to be set to `Application/Json`
 
 ### Sample response
 
