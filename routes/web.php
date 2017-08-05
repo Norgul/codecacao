@@ -12,5 +12,9 @@
 */
 
 Route::get('/', function () {
+    return "Nothing to see here, move along";
+});
+
+Route::get('{uri}', function () {
     return view('welcome');
 });

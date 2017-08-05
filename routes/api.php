@@ -17,5 +17,8 @@ Route::middleware('api')->group(function(){
 
     Route::post('rating', 'RatingController@store');
 
+    Route::get('uri/{uri}', function($uri){
+        return \App\Uri::where('uri', $uri)->first();
+    });
 
 });

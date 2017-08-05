@@ -11,4 +11,9 @@ class Rating extends Model
         'uri',
         'rating'
     ];
+
+    public function uri()
+    {
+        return $this->belongsTo('App\Uri', 'uri', 'uri');
+    }
 }

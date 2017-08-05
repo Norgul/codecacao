@@ -16,9 +16,11 @@ class CreateRatingsTable extends Migration
         Schema::create('ratings', function (Blueprint $table) {
             $table->increments('id');
             $table->string('visitor_id', 255);
-            $table->string('uri', 255);
             $table->integer('rating');
             $table->timestamps();
+
+            $table->string('uri', 255)->unsigned();
+            $table->foreign('uri')->references('uri')->on('uris')->onDelete('cascade');
         });
     }
 

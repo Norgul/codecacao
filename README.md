@@ -71,3 +71,7 @@ You will need to migrate from command line using `artisan migrate`
     }
 }
 ```
+
+### Check distinct URI
+
+`GET` request on `http://codecacao.dev/api/uri/{uri}` returns URI object if it exists.
