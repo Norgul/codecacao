@@ -15,7 +15,7 @@ class RatingController extends Controller
         if (is_null($uri))
             $uri = Uri::create(['uri' => $request->uri]);
 
-        $rating = Rating::create($request->all());
+        Rating::create($request->all());
 
         $uri->update([
             'sum_ratings' => $uri->sum_ratings + $request->rating,
