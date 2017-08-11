@@ -1,5 +1,9 @@
 ## API
 
+### Project description
+
+This is a test project for calculating URI rating average
+
 ### Project initialization
 
 Project needs to be downloaded locally from this link: [Codecacao](https://github.com/Norgul/codecacao).
@@ -24,6 +28,8 @@ DB_CONNECTION=sqlite
 ```
 
 Leave out all other attributes prefixed with `DB_`.
+
+You will also need to create a `database.sqlite` file in `database` folder of the project either through IDE or through the shell by typing `touch database.sqlite`
 
 You will need to migrate from command line using `artisan migrate`
 
