@@ -2,7 +2,7 @@
 
 ### Project description
 
-This is a test project for calculating URI rating average
+This is a test project for calculating URI average rating.
 
 ### Project initialization
 
